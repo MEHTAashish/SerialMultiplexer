@@ -405,7 +405,7 @@ classdef NicoPlex
             end
             
             if nWaits < maxWaits
-                echo = char(fread(serialPort, serialPort.BytesAvailable, 'uchar')');
+                echo = char(fread(serialPort, serialPort.BytesAvailable, 'uchar'));
             else
                 error('Communication did not return text in 5 seconds');
             end
